@@ -1,0 +1,93 @@
+/*Styles go here*/
+
+section {
+	height: 600px;
+	margin-top: -38px;
+	padding-top: 38px;
+}
+
+#home {
+	margin-top: 0;
+}
+
+.nav-wrapper {
+	text-align: center;
+	background-color: lightblue;
+	opacity: .5;
+/*	background: (255,2 55,255,0.5);*/
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+.nav-wrapper ul {
+	margin: 0;
+	padding: 0;
+}
+
+.nav-wrapper li {
+	display: inline-block;
+	padding: 10px;
+
+}
+
+.nav-wrapper a {
+	color: red;
+}
+
+.current a {
+	color: purple;
+	font-weight: 700;
+}
+
+#menu-icon {
+	position: absolute;
+	font-size: 32px;
+	top: 0;
+	right: 10px;
+	cursor: pointer;
+	display: none;
+}
+/* Background Images for each section.  Taken from Lesson 3 class. */
+body {
+		margin: 0px;
+	}
+	.photo {
+		height: 600px;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+
+	.chi {
+		background-image: url(../img/chiskyline.jpg);
+
+	}
+
+	.jerseycity {
+		background-image: url(../img/jerseycity.jpg);
+	}
+
+	.office {
+		background-image: url(../img/office.jpg);
+	}
+
+	.code {
+		background-image: url(../img/code.jpg);
+	}
+
+/*Adjustment for Ipad and lower devices*/
+@media (max-width: 760px) {
+	.nav-wrapper nav {
+		display: none;
+	}
+
+	.nav-wrapper li {
+		display: block;
+	}
+
+	#menu-icon {
+		display: block;
+	}
+}

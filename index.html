@@ -3,72 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
-
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<link rel="stylesheet" href="css/normalize.css">
-		<style>
-			section {
-				height: 600px;
-				/*border: 1px solid black;*/
-				margin-top: -38px;
-				padding-top: 38px;
-			}
-
-			#home {
-				margin-top: 0;
-			}
-
-			.nav-wrapper {
-				text-align: center;
-				background-color: lightblue;
-				position: fixed;
-				top: 0px;
-				left: 0px;
-				width: 100%;
-			}
-
-			.nav-wrapper ul {
-				margin: 0;
-				padding: 0;
-			}
-
-			.nav-wrapper li {
-				display: inline-block;
-				padding: 10px;
-
-			}
-
-			.nav-wrapper a {
-				color: red;
-			}
-
-			.current a {
-				color: purple;
-				font-weight: 700;
-			}
-
-			#menu-icon {
-				position: absolute;
-				font-size: 32px;
-				top: 0;
-				right: 10px;
-				cursor: pointer;
-				display: none;
-			}
-
-			@media (max-width: 760px) {
-				.nav-wrapper nav {
-					display: none;
-				}
-
-				.nav-wrapper li {
-					display: block;
-				}
-
-				#menu-icon {
-					display: block;
-				}
-			}
-		</style>
 	</head>
 	<body>
 		<div class="nav-wrapper">
@@ -85,22 +21,30 @@
 
 		</div>
 		<div id="sections">
-			<section id="home">
+			<section class="photo chi" data-stellar-background-ratio="0.5" id="home" >
 				<h1>Home</h1>
 			</section>
-			<section id="about">
+			<section class="photo office" data-stellar-background-ratio="0.5" id="about" >
 				<h1>About</h1>
 			</section>
-			<section id="resume">
+			<section id="resume" class="photo jerseycity" data-stellar-background-ratio="0.5">
 				<h1>Resume</h1>
 			</section>
-			<section id="projects">
+			<section id="projects" class="photo code" data-stellar-background-ratio="0.5">
 				<h1>Projects</h1>
 			</section>
 		</div>
 <!-- Plugin for navigation of one page sites. -->
 	<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/jquery.nav.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$.stellar();
+		});
+
+	</script>
 	<script>
 		$(document).ready(function() {
 			$('.nav-wrapper').onePageNav({
